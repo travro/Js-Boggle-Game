@@ -1,0 +1,67 @@
+<html>
+<head>
+	<title>Boggle</title>
+	<link href="boggleStyle.css" rel="stylesheet" type="text/css" />
+	<script src = "boggleScript.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+</head>
+<body>
+	<div id="container">		
+		<div id="content">
+			<h1 id="logo">Boggle</h1>
+							
+			<div id="boggleTable" class = "floatleft">
+				<table>
+					<tr >					
+						<td colspan = "4"><input type = "button" id="resetButton" value = "New Game" onclick= "newGame()"/></td>
+					</tr>
+					<tr>
+						<td id="00" onclick = "cellClick(this.id)"></td>
+						<td id="01" onclick = "cellClick(this.id)"></td>
+						<td id="02" onclick = "cellClick(this.id)"></td>
+						<td id="03" onclick = "cellClick(this.id)"></td>
+					</tr>
+					<tr>
+						<td id="10" onclick = "cellClick(this.id)"></td>
+						<td id="11" onclick = "cellClick(this.id)"></td>
+						<td id="12" onclick = "cellClick(this.id)"></td>
+						<td id="13" onclick = "cellClick(this.id)"></td>
+					</tr>
+					<tr>
+						<td id="20" onclick = "cellClick(this.id)"></td>
+						<td id="21" onclick = "cellClick(this.id)"></td>
+						<td id="22" onclick = "cellClick(this.id)"></td>
+						<td id="23" onclick = "cellClick(this.id)"></td>
+					</tr>
+					<tr>
+						<td id="30" onclick = "cellClick(this.id)"></td>
+						<td id="31" onclick = "cellClick(this.id)"></td>
+						<td id="32" onclick = "cellClick(this.id)"></td>
+						<td id="33" onclick = "cellClick(this.id)"></td>
+					</tr>
+					<tr>
+						<td ><input type = "button" value = "X" id= "cancelButton" onclick="cancelWord()"></td>							
+						<td colspan = "2" id="boggleWordBuilder"></td>
+						<td><input type = "button" value = ">>" id= "okButton" onclick="okWord()"></td>
+					</tr>
+				</table>
+				
+			</div>
+
+			<div id="boggleListContainer" class ="floatright">
+				<ul id="boggleListBuilder" align="center"></ul>
+			</div>
+
+			<div id="boggleTimerScore" class = "clearboth">	
+				<p></p>			
+					Time: <span id = "timer" ></span>	&nbsp;&nbsp;			
+					Score: <span id = "score" ></span>												
+			</div>			
+		</div>
+		<div id="footer">Copyright &copy; 2017 Travis C Melvin <br />
+			
+		</div>
+	</div>
+	
+</body>
+</html>
