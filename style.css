@@ -1,0 +1,158 @@
+body { 
+	background-color: #F9F9F9;
+	color: #32323B;
+	font-family: Verdana, Arial, sans-serif;	   
+}
+
+#container { 
+	width:80%;
+}
+
+
+#logo {
+	text-align:center;
+	margin: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
+#content, #output {
+	padding: 10px;
+	overflow:auto;	
+	line-height: 135%;
+	width: 550px;
+	margin-left:auto;
+	margin-right:auto;
+	border: 2px #DADE97;
+	background-color: #32323B;
+	color: #F9F9F9;
+}
+
+.floatright {
+	float:right;
+}
+
+.floatleft {
+	float:left;
+}
+
+.clearleft{
+	clear:left;
+}
+
+.clearright{
+	clear: right;
+}
+
+.clearboth{
+	clear: both;
+}
+
+#footer { 
+	font-size: .60em;
+	font-style: italic;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 350px;
+	margin:auto;
+}
+
+h2 { 
+	text-transform: uppercase;
+     color: #8F9178;
+     font-size: 1.2em;
+     border-bottom: 1px none;
+     margin-right: 20px;
+}
+
+span {
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "Courier New", Courier, mono;
+	color: #8F9178;
+	background-position: center center;
+	text-align: center;
+	vertical-align: middle;
+}
+
+table { 
+	border-collapse: collapse 
+}
+
+
+#boggle-table{
+	width: 330px;
+}
+
+#boggle-table td{
+	padding: 0px;
+	border-spacing: 0px;
+	border: 1px solid #0F2E39;
+	height: 80px;
+	width: 80px;	
+	background: #8F9178;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: 550;
+	font-size: 32pt;
+	color: #3a3ad6;
+	text-align: center;
+}
+
+#boggle-timer-score{
+	border: 1px groove #88FFFF;
+	height: 60px;
+	width: 330px;
+	text-align: center; 
+}
+
+#score{
+	color: #ff8a8a;
+}
+
+#timer{
+	color: #88FFFF;
+}
+
+#boggle-list-container{
+	border: 1px groove #88FFFF;
+	height: 480px;
+	width: 180px;
+	padding: 5px;
+	overflow-y: scroll;
+}
+
+#boggle-list-builder{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 10pt;
+}
+
+#boggle-table #boggle-word-builder{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #F9F9F9;	
+	background-color: #494953;
+}
+
+#ok-button, #cancel-button, #reset-button{
+	width: 100%;
+	height: 100%;
+	font-size: 20pt;
+	font-weight: 300;
+	border: none;
+	color: rgb( 255,255,255);
+}
+
+#ok-button{
+	background-color: rgb(14, 198, 124);	
+}
+
+#cancel-button{
+	background-color: rgb(198, 14, 24);
+}
+
+#reset-button{
+	background-color: rgba(74, 71, 72, 0.90);
+}
+
