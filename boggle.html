@@ -1,67 +1,83 @@
 <html>
+
 <head>
 	<title>Boggle</title>
 	<link href="boggleStyle.css" rel="stylesheet" type="text/css" />
-	<script src = "boggleScript.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="script.js"></script>
 </head>
+
 <body>
-	<div id="container">		
+	<div id="container">
 		<div id="content">
-			<h1 id="logo">Boggle</h1>
-							
-			<div id="boggleTable" class = "floatleft">
+			<h1 id="logo">Classic Boggle</h1>
+
+			<div id="boggle-table" class="floatleft">
 				<table>
-					<tr >					
-						<td colspan = "4"><input type = "button" id="resetButton" value = "New Game" onclick= "newGame()"/></td>
+					<tr>
+						<td colspan="4">
+							<input type="button" id="reset-button" value="New Game" />
+							<!--onclick="newGame()"-->
+						</td>
 					</tr>
 					<tr>
-						<td id="00" onclick = "cellClick(this.id)"></td>
-						<td id="01" onclick = "cellClick(this.id)"></td>
-						<td id="02" onclick = "cellClick(this.id)"></td>
-						<td id="03" onclick = "cellClick(this.id)"></td>
+						<td id="00" class="table-die"></td>
+						<!--onclick ="cellClick(this.id)"-->
+						<td id="01" class="table-die"></td>
+						<td id="02" class="table-die"></td>
+						<td id="03" class="table-die"></td>
 					</tr>
 					<tr>
-						<td id="10" onclick = "cellClick(this.id)"></td>
-						<td id="11" onclick = "cellClick(this.id)"></td>
-						<td id="12" onclick = "cellClick(this.id)"></td>
-						<td id="13" onclick = "cellClick(this.id)"></td>
+						<td id="10" class="table-die"></td>
+						<td id="11" class="table-die"></td>
+						<td id="12" class="table-die"></td>
+						<td id="13" class="table-die"></td>
 					</tr>
 					<tr>
-						<td id="20" onclick = "cellClick(this.id)"></td>
-						<td id="21" onclick = "cellClick(this.id)"></td>
-						<td id="22" onclick = "cellClick(this.id)"></td>
-						<td id="23" onclick = "cellClick(this.id)"></td>
+						<td id="20" class="table-die"></td>
+						<td id="21" class="table-die"></td>
+						<td id="22" class="table-die"></td>
+						<td id="23" class="table-die"></td>
 					</tr>
 					<tr>
-						<td id="30" onclick = "cellClick(this.id)"></td>
-						<td id="31" onclick = "cellClick(this.id)"></td>
-						<td id="32" onclick = "cellClick(this.id)"></td>
-						<td id="33" onclick = "cellClick(this.id)"></td>
+						<td id="30" class="table-die"></td>
+						<td id="31" class="table-die"></td>
+						<td id="32" class="table-die"></td>
+						<td id="33" class="table-die"></td>
 					</tr>
 					<tr>
-						<td ><input type = "button" value = "X" id= "cancelButton" onclick="cancelWord()"></td>							
-						<td colspan = "2" id="boggleWordBuilder"></td>
-						<td><input type = "button" value = ">>" id= "okButton" onclick="okWord()"></td>
+						<td>
+							<input type="button" value="X" id="cancel-button">
+							<!--onclick="cancelWord()"-->
+						</td>
+						<td colspan="2" id="boggle-word-builder"></td>
+						<td>
+							<input type="button" value=">>" id="ok-button">
+							<!--onclick="okWord()"-->
+						</td>
 					</tr>
 				</table>
-				
+
 			</div>
 
-			<div id="boggleListContainer" class ="floatright">
-				<ul id="boggleListBuilder" align="center"></ul>
+			<div id="boggle-list-container" class="floatright">
+				<ul id="boggle-list-builder" align="center"></ul>
 			</div>
 
-			<div id="boggleTimerScore" class = "clearboth">	
-				<p></p>			
-					Time: <span id = "timer" ></span>	&nbsp;&nbsp;			
-					Score: <span id = "score" ></span>												
-			</div>			
+			<div id="boggle-timer-score" class="clearboth">
+				<p></p>
+				Time:&nbsp;
+				<span id="timer"></span>&nbsp;&nbsp;Score:&nbsp;
+				<span id="score"></span>
+			</div>
 		</div>
-		<div id="footer">Copyright &copy; 2017 Travis C Melvin <br />
-			
+		<div id="footer">Copyright &copy; 2018 Travis C Melvin
+			<br />
+
 		</div>
 	</div>
-	
+
 </body>
+
 </html>
