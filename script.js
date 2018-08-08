@@ -151,9 +151,9 @@ $(document).ready(() => {
 
     function countDown() {
         gameTime--;
-        loadTime(gameTime);
-        if (gameTime == 0) {
-            alert("Times up! Your score is: " + gameScore + ". Press 'New Game' to play again.");
+        loadTime(this.gameTime);
+        if (this.gameTime == 0) {
+            alert("Times up! Your score is: " + this.gameScore + ". Press 'New Game' to play again.");
             gameOver();
         }
     }
