@@ -30,17 +30,16 @@ $(document).ready(() => {
     let lastClicked = "";
     let wordList = [];
     let gameScore = 0;
-    let gameTime = 180;
+    let gameTime;
     let begin;
 
-    updateScore(this.gameScore);
-    loadTime(this.gameTime);
+    updateScore(gameScore);
+    loadTime(gameTime);
 
     $("#reset-button").click(() => {
         clearInterval(begin);
         begin = setInterval(() => { countDown() }, 1000);
-        this.gameTime = 180;
-        loadTime(this.gameTime);
+        loadTime(gameTime = 180);
         resetDataAndOutput();
         clearList();
         loadLettersToTable();
@@ -66,8 +65,8 @@ $(document).ready(() => {
             else /* good to go */ {
 
                 wordList.push(word);
-                this.gameScore += scoreWord(word);
-                updateScore(this.gameScore);
+                gameScore += scoreWord(word);
+                updateScore(gameScore);             
                 $("#boggle-list-builder").append("<li>" + word + "</li>");
                 resetDataAndOutput();
             }
@@ -145,15 +144,15 @@ $(document).ready(() => {
         return (lastClicked == adjacentCoords.find(a => a == lastClicked));
     }
 
-    function loadTime(gameTime) {
-        $("#timer").text(gameTime);
+    function loadTime(t) {
+        $("#timer").text(t);
     }
 
     function countDown() {
         gameTime--;
-        loadTime(this.gameTime);
-        if (this.gameTime == 0) {
-            alert("Times up! Your score is: " + this.gameScore + ". Press 'New Game' to play again.");
+        loadTime(gameTime);
+        if (gameTime == 0) {
+            alert("Times up! Your score is: " + gameScore + ". Press 'New Game' to play again.");
             gameOver();
         }
     }
@@ -173,8 +172,8 @@ $(document).ready(() => {
     function clearList() {
         $("#boggle-list-builder").text("");
         wordList = [];
-        this.gameScore = 0;
-        updateScore(this.gameScore);
+        gameScore = 0;
+        updateScore(gameScore);
     }
 
     function updateScore(s) {
